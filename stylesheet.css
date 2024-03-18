@@ -18,7 +18,7 @@ body {
   /* background: url("bgpic.png") no-repeat; */
   background-size: cover;
   background-position: center;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 .header {
   position: fixed;
@@ -814,8 +814,9 @@ section {
   box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
 }
 .contact-form form .send:hover{
-  box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan,
-              0 0 200px cyan;
+  box-shadow: 0 0 5px cyan, 0 0 20px cyan, 0 0 35px cyan, 0 0 50px cyan,
+              0 0 75px cyan;
+  transition: 0.5s ease-in-out;
 }
 .last-text p{
   width: 100%;
