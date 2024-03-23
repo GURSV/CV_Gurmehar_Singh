@@ -5,20 +5,16 @@ var typed = new Typed(".text", {
     backDelay: 1000,
     loop: true
 });
-document.addEventListener("DOMContentLoaded", function() {
-    // Select all progress bars
+
+// Function to animate progress bars
+function animateProgressBars() {
     var progressBars = document.querySelectorAll('.progress-bar');
 
-    // Loop through each progress bar
     progressBars.forEach(function(bar) {
-        // Get the width (percentage) from aria-valuenow attribute
         var width = parseInt(bar.getAttribute('aria-valuenow'));
-        console.log(width)
-        // Animate the width of the progress bar from 0 to the specified percentage
         animateProgressBar(bar, width);
     });
 
-    // Function to animate the progress bar
     function animateProgressBar(bar, width) {
         var currentWidth = 0;
         var interval = setInterval(frame, 10);
@@ -33,4 +29,22 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     }
-});
+}
+
+var options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.4 
+};
+
+var observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+            animateProgressBars();
+            observer.unobserve(entry.target);
+        }
+    });
+}, options);
+
+var targetElement = document.getElementById('TechnicalSkills');
+observer.observe(targetElement);
