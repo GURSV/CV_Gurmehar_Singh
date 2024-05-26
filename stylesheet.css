@@ -62,6 +62,11 @@ body {
 .navbar a:hover {
   color: #0ef;
 }
+
+.logo:hover {
+  color: #0ef;
+}
+
 .home {
   position: relative;
   width: 100%;
