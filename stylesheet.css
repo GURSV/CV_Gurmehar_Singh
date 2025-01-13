@@ -7,14 +7,14 @@
   font-optical-sizing: auto;
   font-weight: 100;
   font-style: normal; */
-  font-family: "Fira Code", monospace;
+  font-family: 'Iosevka', monospace;
   font-optical-sizing: auto;
   font-weight: 100;
   font-style: normal;
 }
 body {
   color: #ededed;
-  background: #081b29;
+  background: #000000;
   /* background: url("bgpic.png") no-repeat; */
   background-size: cover;
   background-position: center;
@@ -26,7 +26,7 @@ body {
   left: 0;
   width: 100%;
   padding: 20px 10%;
-  background: #051129;
+  background: #36454f;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,17 +54,17 @@ body {
   opacity: 0;
   animation: slideTop 0.5s ease forwards;
   animation-delay: calc(0.2s * var(--i));
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Iosevka', monospace;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
 }
 .navbar a:hover {
-  color: #0ef;
+  color: rgb(0, 212, 255);;
 }
 
 .logo:hover {
-  color: #0ef;
+  color: rgb(3, 179, 249);
 }
 
 .home {
@@ -78,8 +78,48 @@ body {
   padding: 70px 10% 0;
 }
 .home-content {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px; /* Increased from 40px to add more space */
+}
+.text-content {
+  flex: 1;
   max-width: 600px;
-  /* margin-top: 150px; */
+}
+#memeContainer {
+  flex: 0 0 400px;
+  width: 400px;
+  height: 400px;
+  overflow-y: auto; /* Changed from 'hidden' to 'auto' to allow scrolling */
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+  position: relative;
+  margin-left: 200px;
+  /* Add custom scrollbar styling */
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 255, 255) transparent;
+}
+/* Styling for Webkit browsers (Chrome, Safari, etc.) */
+#memeContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+#memeContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#memeContainer::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0);
+  border-radius: 4px;
+}
+
+#memeContainer img {
+  width: 100%;
+  height: auto; /* Changed from 100% to auto to maintain image aspect ratio */
+  object-fit: contain; /* Changed from 'cover' to 'contain' to show full image */
 }
 .home-content h3 {
   opacity: 0;
@@ -94,7 +134,7 @@ body {
   animation-delay: 0.7s;
 }
 .home-content h3 span {
-  color: #0ef;
+  color: rgb(3, 179, 249);
 }
 .home-content h1 {
   font-size: 56px;
@@ -117,10 +157,10 @@ body {
   width: 40px;
   height: 40px;
   background: transparent;
-  border: 2px solid #0ef;
+  border: 2px solid rgb(3, 179, 249);
   border-radius: 50%;
   font-size: 20px;
-  color: #0ef;
+  color: rgb(3, 179, 249);
   text-decoration: none;
   transition: 0.5s ease;
   opacity: 0;
@@ -131,7 +171,7 @@ body {
   margin: 30px 15px 30px 0;
 }
 .home-sci a:hover i {
-  background: #0ef !important;
+  background: rgb(3, 179, 249) !important;
   color: #081b29 !important;
   box-shadow: 0 0 30px #0ef;
   transition: 0.5s ease;
@@ -142,7 +182,7 @@ body {
 .btn-box {
   display: inline-block;
   padding: 12px 28px;
-  background: #0ef;
+  background: rgb(3, 179, 249);;
   border-radius: 40px;
   font-size: 16px;
   color: #081b29;
@@ -190,7 +230,7 @@ body {
 }
 
 .about-text h2 span {
-  color: #0ef;
+  color: rgb(3, 179, 249);
 }
 
 .about-text h4 {
@@ -275,7 +315,7 @@ body {
   padding-bottom: 70px;
 }
 .sub-title span {
-  color: #0ef;
+  color: rgb(3, 179, 249);
 }
 .container {
   padding: 90px;
@@ -294,7 +334,7 @@ body {
   border-right: 10px;
   border-radius: 10px;
   transition: background 0.5s, transform 0.5s;
-  box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #0053b8f7;
+  box-shadow: 1px 1px 20px #5294e5f7, 1px 1px 40px #5294e5f7;
 }
 .services-list div i {
   font-size: 50px;
@@ -307,6 +347,7 @@ body {
 }
 .services-list div a {
   text-decoration: none;
+  background-color: rgb(3, 179, 249);
   color: #000000;
   font-size: 12px;
   margin-top: 20px;
@@ -647,7 +688,7 @@ section {
   text-align: center;
 }
 .main-text h2 span {
-  color: #0ef;
+  color: rgb(3, 179, 249);
 }
 .portfolio-content {
   display: grid;
@@ -722,10 +763,10 @@ section {
 .contact-text h2{
   font-size: 90px;
   line-height: 1;
-  text-align: center;
+  margin-left: -6px;
 }
 .contact-text h2 span{
-  color: #0ef;
+  color: rgb(3, 179, 249);
 }
 .contact-text h4{
   margin: 15px 0;
@@ -753,14 +794,14 @@ section {
 }
 .contact-list i{
   display: inline-block;
-  color: #0ef;
+  color: rgb(3, 179, 249);
   font-size: 20px;
   font-weight: 600;
   transition: all .40s ease;
 }
 .contact-list li a:hover{
   transform: scale(1.01) translateY(-5px);
-  color: #0ef;
+  color: rgb(3, 179, 249);
 }
 .contact-icons i{
   display: inline-flex;
@@ -769,10 +810,10 @@ section {
   width: 40px;
   height: 40px;
   background: transparent;
-  border: 2px solid #0ef;
+  border: 2px solid rgb(3, 179, 249);
   border-radius: 50%;
   font-size: 25px;
-  color: #0ef;
+  color: rgb(3, 179, 249);
   text-decoration: none;
   margin: 30px 15px 30px 0;
   transition: .5s ease;
@@ -781,7 +822,7 @@ section {
   animation-delay: calc(.2s * var(--i));
 }
 .contact-icons a:hover i{
-  background: #0ef !important;
+  background: rgb(3, 179, 249) !important;
   color: #081b29 !important;
   box-shadow: 0 0 30px #0ef;
   transition: 0.5s ease;
@@ -808,7 +849,7 @@ section {
 .contact-form form .send{
   display: inline-block;
   padding: 14px 60px;
-  background: #0ef;
+  background: rgb(3, 179, 249);
   border-radius: 40px;
   font-size: 18px;
   color: #081b29;
@@ -821,15 +862,15 @@ section {
   box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
 }
 .contact-form form .send:hover{
-  box-shadow: 0 0 5px cyan, 0 0 20px cyan, 0 0 35px cyan, 0 0 50px cyan,
-              0 0 75px cyan;
+  box-shadow: 0 0 5px rgb(129, 209, 241), 0 0 20px rgb(129, 209, 241), 0 0 35px rgb(129, 209, 241), 0 0 50px rgb(129, 209, 241),
+              0 0 75px rgb(129, 209, 241);
   transition: 0.3s ease-in-out;
 }
 .last-text p{
   width: 100%;
   text-align: center;
   padding: 25px 0;
-  background: rgb(7, 85, 91);
+  background: #36454f;
   font-weight: 300;
   margin-top: 70px;
 }
@@ -840,8 +881,390 @@ section {
 }
 .top i{
   color: #000;
-  background: #0ef;
+  background: rgb(3, 179, 249);
   font-size: 20px;
   padding: 10px;
   border-radius: 0.5rem;
+}
+
+/* For Responsiveness */
+/* Base styles for responsive design */
+@media screen and (max-width: 1200px) {
+  .home {
+      padding: 110px 4% 100px;
+  }
+  
+  .about {
+      padding: 110px 4% 100px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+  }
+  
+  .about-img img {
+      margin-left: 0 !important;
+      max-width: 100%;
+      height: auto;
+  }
+  
+  .about-text {
+      margin-bottom: 50px !important;
+      text-align: center;
+  }
+  
+  .about-text p {
+      width: 100% !important;
+      max-width: 750px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header {
+      padding: 15px 5%;
+  }
+  
+  .navbar {
+      display: none;
+  }
+  
+  /* Add hamburger menu for mobile */
+  .header .menu-icon {
+      display: block;
+      font-size: 35px;
+      cursor: pointer;
+      z-index: 10001;
+  }
+  
+  .navbar.active {
+      display: flex;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #0e1c30;
+      flex-direction: column;
+      padding: 1rem 0;
+  }
+  
+  .navbar.active a {
+      display: block;
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .services .container {
+      margin-left: 0 !important;
+      padding: 20px;
+  }
+  
+  .services-list {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-content {
+      text-align: center;
+  }
+  
+  .home-content h1 {
+      font-size: 2.5rem;
+  }
+  
+  .container1 {
+      margin-left: 5% !important;
+      margin-right: 5%;
+  }
+  
+  .Technical-bars {
+      width: 100%;
+  }
+  
+  .portfolio-content {
+      grid-template-columns: 1fr;
+      padding: 20px;
+  }
+  
+  .contact {
+      flex-direction: column;
+      margin-left: 0 !important;
+      padding: 20px;
+  }
+  
+  .contact-text {
+      text-align: center;
+  }
+  
+  .contact-text h2 {
+      margin-left: 0 !important;
+  }
+  
+  .contact-form {
+      width: 100%;
+      margin-top: 50px !important;
+  }
+  
+  .contact-form form {
+      width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+      font-size: 1.5rem;
+  }
+  
+  .home-content h1 {
+      font-size: 2rem;
+  }
+  
+  .home-content h3 {
+      font-size: 1.5rem;
+  }
+  
+  .services-list div {
+      padding: 20px;
+  }
+  
+  .contact-list li {
+      font-size: 0.9rem;
+  }
+  
+  .last-text {
+      padding: 20px;
+      text-align: center;
+  }
+}
+
+/* Additional utility classes */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+      max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+      max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+      max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+      max-width: 1140px;
+  }
+}
+
+/* Center the Certifications section */
+.services .container {
+  margin: 0 auto !important;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.services .sub-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Hide menu icon for desktop and only show for mobile */
+.menu-icon {
+  display: none !important; /* Hidden by default for desktop */
+}
+
+/* Contact section layout fix */
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 50px;
+}
+
+.contact-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.contact-form {
+  flex: 1;
+  max-width: 500px;
+  margin-top: 0 !important;
+}
+
+.contact-form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 991px) {
+  .menu-icon {
+      display: block !important; /* Show menu icon for mobile */
+  }
+  
+  .navbar {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+      flex-direction: column;
+      padding: 20px;
+  }
+  
+  .contact-text, .contact-form {
+      max-width: 100%;
+  }
+  
+  .contact-text {
+      margin-bottom: 30px;
+  }
+  
+  .services .container {
+      padding: 0 15px;
+  }
+}
+
+/* Service cards grid layout */
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+/* Additional utility class for sections */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Ensure proper spacing for larger screens */
+@media screen and (min-width: 992px) {
+  .navbar {
+      display: flex !important;
+  }
+  
+  .services-list {
+      grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .contact {
+      margin-top: 170px;
+      gap: 100px;
+  }
+}
+/* Ensure the title is centered */
+.sub-title {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+/* Adjust container positioning */
+.services {
+    padding: 50px 0;
+    width: 100%;
+}
+
+/* Remove any conflicting margins */
+.container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Media queries for responsive design */
+@media screen and (min-width: 1200px) {
+    .services-list {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .services-list {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services-list {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+}
+
+/* brah new */
+/* Ensure the title is centered */
+.sub-title {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+/* Adjust container positioning */
+.services {
+  padding: 50px 0;
+  width: 100%;
+}
+
+/* Remove any conflicting margins */
+.container {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Media queries for responsive design */
+@media screen and (min-width: 1200px) {
+  .services-list {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .services-list {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services-list {
+      grid-template-columns: 1fr;
+      padding: 0 15px;
+  }
 }
