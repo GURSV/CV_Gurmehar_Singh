@@ -974,7 +974,11 @@ section {
   .home-content h1 {
       font-size: 2.5rem;
   }
-  
+
+  .about-img img {
+    margin-top: 60px;
+  }
+
   .container1 {
       margin-left: 5% !important;
       margin-right: 5%;
@@ -1266,5 +1270,156 @@ section {
   .services-list {
       grid-template-columns: 1fr;
       padding: 0 15px;
+  }
+}
+#memeContainer {
+  flex: 0 0 400px;
+  width: 400px;
+  height: 400px;
+  overflow-y: auto;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+  position: relative;
+  margin-left: 200px;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 255, 255) transparent;
+}
+
+#memeContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+#memeContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#memeContainer::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 0, 0);
+  border-radius: 4px;
+}
+
+#memeContainer img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Large screens (laptops and desktops) */
+@media screen and (max-width: 1400px) {
+  #memeContainer {
+      flex: 0 0 350px;
+      width: 350px;
+      height: 350px;
+      margin-left: 150px;
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .home-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    #memeContainer {
+        margin-top: 40px;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    #memeContainer {
+        max-width: 90%;
+        margin: 30px auto;
+    }
+    
+    .meme-title {
+        font-size: 20px;
+    }
+    
+    .meme-subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #memeContainer {
+        padding: 15px;
+    }
+    
+    .meme-title {
+        font-size: 18px;
+    }
+    
+    .meme-subtitle {
+        font-size: 14px;
+    }
+}
+/* Base styles */
+.portfolio .section-title {
+  margin-top: 235px;
+  margin-bottom: 120px;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.portfolio .section-title span {
+  color: rgb(3, 179, 249);
+}
+
+/* Large screens (laptops and desktops) */
+@media screen and (max-width: 1400px) {
+  .portfolio .section-title {
+      margin-top: 200px;
+      margin-bottom: 100px;
+      font-size: 2.3rem;
+  }
+}
+
+/* Medium screens (small laptops) */
+@media screen and (max-width: 1200px) {
+  .portfolio .section-title {
+      margin-top: 180px;
+      margin-bottom: 90px;
+      font-size: 2.1rem;
+  }
+}
+
+/* Tablet screens */
+@media screen and (max-width: 991px) {
+  .portfolio .section-title {
+      margin-top: 150px;
+      margin-bottom: 80px;
+      font-size: 2rem;
+  }
+}
+
+/* Large mobile screens */
+@media screen and (max-width: 768px) {
+  .portfolio .section-title {
+      margin-top: 120px;
+      margin-bottom: 70px;
+      font-size: 1.8rem;
+  }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 480px) {
+  .portfolio .section-title {
+      margin-top: 360px;
+      margin-bottom: 60px;
+      font-size: 1.6rem;
+  }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 350px) {
+  .portfolio .section-title {
+      margin-top: 70px;
+      margin-bottom: 50px;
+      font-size: 1.4rem;
   }
 }
