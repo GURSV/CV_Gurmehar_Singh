@@ -700,7 +700,7 @@ section {
 }
 
 .main-text h2 {
-  margin: 40px 0;  /* Reduced from 235px/120px */
+  margin-bottom: 110px;  /* Reduced from 235px/120px */
   text-align: center;
 }
 
