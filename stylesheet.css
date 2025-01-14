@@ -205,6 +205,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   gap: 1.5rem;
+  margin-top: 100px;
 }
 
 .about-img img {
@@ -690,6 +691,22 @@ section {
 .main-text h2 span {
   color: rgb(3, 179, 249);
 }
+
+.project-section {
+  margin-top: -240px;  /* Instead of large margins */
+  margin-bottom: 170px;
+  position: relative;
+  width: 100%;
+}
+
+.main-text h2 {
+  margin: 40px 0;  /* Reduced from 235px/120px */
+  text-align: center;
+}
+
+.portfolio-content {
+  margin-top: 40px;
+}
 .portfolio-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(359px, auto));
@@ -709,7 +726,7 @@ section {
 .layer {
   width: 100%;
   height: 0;
-  background: linear-gradient(rgba(0,0,0,0.1), #0ef);
+  background: linear-gradient(rgb(180, 193, 198), rgb(3, 179, 249));
   position: absolute;
   border-radius: 8px;
   left: 0;
@@ -758,7 +775,7 @@ section {
   align-items: center;
   gap: 3rem;
   padding-left: 30px;
-  margin-top: 130px;
+  /* margin-top: 130px; */
 }
 .contact-text h2{
   font-size: 90px;
@@ -1180,7 +1197,7 @@ section {
   }
   
   .contact {
-      margin-top: 170px;
+      margin-top: 80px;
       gap: 100px;
   }
 }
@@ -1193,6 +1210,7 @@ section {
 
 /* Adjust container positioning */
 .services {
+    margin-bottom: 105px;
     padding: 50px 0;
     width: 100%;
 }
@@ -1267,4 +1285,251 @@ section {
       grid-template-columns: 1fr;
       padding: 0 15px;
   }
+}
+#memeContainer {
+    flex: 0 0 400px;
+    width: 400px;
+    height: 400px;
+    overflow-y: auto;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1.2s;
+    opacity: 0;
+    position: relative;
+    margin-left: 200px;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(255, 255, 255) transparent;
+}
+
+#memeContainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+#memeContainer::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#memeContainer::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0);
+    border-radius: 4px;
+}
+
+#memeContainer img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Large screens (laptops and desktops) */
+@media screen and (max-width: 1400px) {
+    #memeContainer {
+        flex: 0 0 350px;
+        width: 350px;
+        height: 350px;
+        margin-left: 150px;
+    }
+}
+
+/* Medium screens (small laptops) */
+@media screen and (max-width: 1200px) {
+    #memeContainer {
+        flex: 0 0 300px;
+        width: 300px;
+        height: 300px;
+        margin-left: 100px;
+    }
+}
+
+/* Tablet screens */
+@media screen and (max-width: 991px) {
+    #memeContainer {
+        flex: 0 0 400px;
+        width: 400px;
+        height: 400px;
+        margin-left: 0;
+        margin: 20px auto;
+    }
+}
+
+/* Large mobile screens */
+@media screen and (max-width: 768px) {
+    #memeContainer {
+        flex: 0 0 350px;
+        width: 350px;
+        height: 350px;
+    }
+    
+    #memeContainer h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 480px) {
+    #memeContainer {
+        flex: 0 0 300px;
+        width: 300px;
+        height: 300px;
+        margin: 15px auto;
+    }
+    
+    #memeContainer h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 350px) {
+    #memeContainer {
+        flex: 0 0 250px;
+        width: 250px;
+        height: 250px;
+        margin: 10px auto;
+    }
+}
+
+/* Animation keyframes */
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.divider-container {
+  width: 100%;
+  margin: 2rem auto;
+  position: relative;
+}
+
+/* Base styles for all fancy hrs */
+.fancy-hr {
+  border: none;
+  margin: 0;
+}
+
+/* Option 1: Gradient line with dots */
+.gradient-dots {
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b6b, rgb(3, 179, 249));
+  position: relative;
+}
+
+.gradient-dots::before,
+.gradient-dots::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(3, 179, 249);
+  top: -2px;
+}
+
+.gradient-dots::before {
+  left: 0;
+}
+
+.gradient-dots::after {
+  right: 0;
+}
+
+/* Option 2: Double line with center design */
+.double-design {
+  height: 4px;
+  border: none;
+  background: none;
+  position: relative;
+}
+
+.double-design::before,
+.double-design::after {
+  content: '';
+  position: absolute;
+  width: calc(50% - 30px);
+  height: 1px;
+  background: #333;
+  top: 50%;
+}
+
+.double-design::before {
+  left: 0;
+}
+
+.double-design::after {
+  right: 0;
+}
+
+.double-design::before {
+  background: linear-gradient(90deg, transparent, #333);
+}
+
+.double-design::after {
+  background: linear-gradient(90deg, #333, transparent);
+}
+
+/* Option 3: Animated wave */
+.wave {
+  height: 3px;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    rgb(3, 179, 249) 50%,
+    transparent 100%
+  );
+  animation: wave 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes wave {
+  0% {
+    transform: scaleX(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scaleX(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0.95);
+    opacity: 0.8;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .divider-container {
+    margin: 1.5rem auto;
+  }
+  
+  .double-design::before,
+  .double-design::after {
+    width: calc(50% - 20px);
+  }
+  
+  .gradient-dots {
+    height: 3px;
+  }
+  
+  .gradient-dots::before,
+  .gradient-dots::after {
+    width: 6px;
+    height: 6px;
+    top: -1.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .divider-container {
+    margin: 1rem auto;
+  }
+  
+  .double-design::before,
+  .double-design::after {
+    width: calc(50% - 15px);
+  }
+}
+#project {
+  margin-bottom: 150px;  
 }
